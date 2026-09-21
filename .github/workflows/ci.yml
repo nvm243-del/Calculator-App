@@ -20,5 +20,5 @@ jobs:
         run: |
           test -f index.html
           test -f script.js
-          test -f style-wrong.css
+          test -f style.css
           echo "All calculator files are present!"
