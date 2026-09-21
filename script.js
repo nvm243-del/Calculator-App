@@ -1,22 +1,33 @@
-let display = document.getElementById('display');
+function squareRoot() {
+    try {
+        const value = parseFloat(display.value);
 
-function appendValue(value) {
-  display.value += value;
+        if (isNaN(value) || value < 0) {
+            display.value = "Error";
+            return;
+        }
+
+        const result = Math.sqrt(value);
+        display.value = value + " √ = " + result;
+
+    } catch (error) {
+        display.value = "Error";
+    }
 }
 
-function clearDisplay() {
-  display.value = '';
-}
+function squareNumber() {
+    try {
+        const value = parseFloat(display.value);
 
-function calculate() {
-  const expression = display.value;
+        if (isNaN(value)) {
+            display.value = "Error";
+            return;
+        }
 
-  // v1 only understands a single + or - between two numbers
-  if (expression.includes('+')) {
-    const parts = expression.split('+');
-    display.value = Number(parts[0]) + Number(parts[1]);
-  } else if (expression.includes('-')) {
-    const parts = expression.split('-');
-    display.value = Number(parts[0]) - Number(parts[1]);
-  }
+        const result = value * value;
+        display.value = value + "² = " + result;
+
+    } catch (error) {
+        display.value = "Error";
+    }
 }
