@@ -38,8 +38,7 @@ integration with GitHub Actions, and deployment via GitHub Pages.
 | `script.js`  | Calculator logic                  |
 
 ## Live Demo
-
-*(Link will be added here once deployed via GitHub Pages)*
+ https://nvm243-del.github.io/Calculator-App/
 
 ## Author
 
